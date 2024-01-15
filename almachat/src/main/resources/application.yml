@@ -1,0 +1,32 @@
+jwt:
+  secret: 126d94f6186413756ed401ddd8ee1db65bdb84fe353d7e49fba454f5deea8a7d
+  expiration: 604800000
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.0.103:27017/almachat
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
+            scope:
+              - email
+              - profile
+          facebook: #https://developers.facebook.com/docs/facebook-login/
+            client-id:
+            client-secret:
+            scope:
+              - email
+              - profile
+          github:
+            client-id:
+            client-secret:
+            scope:
+              - user:email
+              - read:user
+
